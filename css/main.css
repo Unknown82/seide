@@ -1,0 +1,551 @@
+/* ------ Spezifikation ------ */
+
+body {
+	font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+	color: #2d3033;
+	padding: 0;
+	margin: 0;
+}
+
+div, p, form, input, a, span, button {
+	box-sizing: border-box;
+}
+
+p {
+	margin: 0;
+    font-size: 14px;
+    line-height: 1.4em;
+    margin-bottom: 1em;
+    font-weight: 400;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	line-height: 1.06em;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+h1 {
+	font-size: 35px;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h3 {
+	font-size: 25px;
+}
+
+h4 {
+	font-size: 20px;
+
+}
+
+
+a, a:hover, a:active {
+	text-decoration: none;
+}
+
+a, button, input {
+	transition: all 0.5s ease;
+}
+
+input, input:hover, input:focus, input:active,
+button, button:hover, button:focus, button:active
+
+ {
+	outline: none;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    background: #EFE407;
+    color: #387FCC;
+    font-weight: 700;
+    border: 2px solid #EFE407;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5em;
+    height: 100%;
+    background-color: rgba(255,255,255, 0.6);
+    transform: translateX(-5em) skewX(-45deg);
+    animation: movet 1.5s infinite;
+}
+
+.btn:hover {
+    background: #387FCC;
+    color: #EFE407;
+    border: 2px solid #EFE407;
+}
+
+@keyframes movet {
+    from {
+        transform: translateX(-20em) skewX(-45deg);
+    }
+    to {
+        transform: translateX(20em) skewX(-45deg);
+    }
+}
+
+
+/* ------ Header ------ */
+
+
+.nav {
+    background-color: #387FCC;
+    padding: 10px 0;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.nav-menu__item {
+    position: relative;
+    color: #fff;
+    margin: 0 10px;
+    padding: 7px 10px;
+} 
+
+/* .nav-menu__item:hover {
+    background: #EFE407;
+    padding: 24px 20px;
+}
+
+.nav-menu__item-active {
+    background: #EFE407;
+    color: #387FCC;
+}  */
+
+.nav-menu__item:before, .nav-menu__item:after
+{
+    position: absolute;
+    opacity: 0.5;
+    height: 100%;
+
+    content: '';
+    background: #FFF;
+    transition: all 0.5s;
+}
+
+.nav-menu__item:before
+{
+    right: 0px;
+    bottom: 0px;
+}
+
+.nav-menu__item:after
+{
+    right: 0px;
+    top: 0px;
+}
+
+.nav-menu__item:hover:before, .nav-menu__item:hover:after
+{
+    opacity: 1;
+    height: 2px;
+    width: 100%;
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #387FCC;
+    color: #fff;
+    min-width: 190px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 1px;
+    margin-top: 22px;
+}
+  
+  
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content a:hover {
+    background-color: #EFE407;
+    color: #387FCC;
+    border-radius: 1px;
+}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.sub {
+    background: #f5f4f4 url(../img/header.png) no-repeat center 85%;
+    padding-bottom: 100px;
+    height: 900px;
+}
+
+.sub-wrap {
+    margin-top: 180px;
+}
+
+.sub-wrap__title {
+    padding-bottom: 30px;
+    text-align: center;
+    width: 755px;
+    line-height: 1.2;
+}
+
+.sub-wrap__text {
+    width: 563px;
+    text-align: center;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.sub-btn {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    background: #387FCC;
+    color: #fff;
+    padding: 10px 20px;
+    border: 2px solid #387FCC;
+    overflow: hidden;
+
+}
+
+.sub-btn:hover {
+    background: #fff;
+    color: #387FCC;
+    border: 2px solid #387FCC;
+}
+
+
+/* ------ 2 Intro ------ */
+
+.int {
+    padding: 100px 0;
+}
+
+.intro {
+
+    padding: 10px;
+
+}
+
+.intro__img {
+    width: 100%;
+}
+
+.intro__title {
+
+    margin-bottom: 20px;
+}
+
+.intro__text {
+
+}
+/* ------ 3 Transport ------ */
+
+
+.transport {
+    background: #f5f4f4;
+    padding: 100px 0;
+}
+
+.transport__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.transporte {
+    background: #fff;
+	text-align: center;
+	width: 340px;
+	height: 350px;
+	padding: 35px 30px 15px;
+	border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+	box-shadow: 5px 5px 15px -15px black;
+	box-shadow: 0 2px 7px 0 rgba(10,10,10,.05), 3px 27px 54px -34px rgba(0,0,0,.47);
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+.transporte:hover {
+	box-shadow: 0 3px 10px 0 rgba(0,0,0,.07);
+}
+
+.transporte-title {
+    color: #387FCC;
+	text-align: center;
+	font-weight: 700;
+    display: block;
+}
+
+.transporte-text__preis {
+    display: block;
+	font-size: 12px;
+    margin-bottom: 30px;
+}
+
+.transporte-text {
+    margin-bottom: 122px;
+}
+
+.transporte-text-9 {
+    margin-bottom: 28px;
+}
+
+.transporte-text-3 {
+    margin-bottom: 142px;
+}
+
+.transporte-text-5 {
+    margin-bottom: 107px;
+}
+
+.transporte-text-6 {
+    margin-bottom: 87px;
+}
+
+.transporte-text-8 {
+    margin-bottom: 49px;
+}
+
+.transporte-text-7 {
+    margin-bottom: 69px;
+}
+
+.transporte__description {
+    width: 340px;
+	background: #387FCC;
+	text-align: center;
+    padding: 25px 20px 25px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 2px 7px 0 rgba(10,10,10,.05), 3px 27px 54px -34px rgba(0,0,0,.47);
+    margin: 0 auto;
+}
+
+.transporte__description:hover{
+	box-shadow: 0 3px 10px 0 rgba(0,0,0,.07);
+}
+
+
+/* ------ 4 Wissen ------ */
+
+
+.wiss {
+    padding: 100px 0;
+}
+
+.wiss-title {
+    text-align: center;
+}
+
+.wissen__title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.wissen {
+    background: #387FCC;
+	text-align: center;
+	width: 340px;
+	height: 450px;
+	padding: 35px 30px 15px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 15px -15px black;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+
+
+.wissen-title {
+    color: #fff;
+	text-align: center;
+	font-weight: 700;
+    display: block;
+}
+
+.wissen-text {
+    color: #fff;
+}
+
+
+/* ------ 5 Partner ------ */
+
+
+.work {
+
+}
+
+.workspace {
+	background: url('../img/partner.jpg') no-repeat center center / cover;
+	height: 550px;
+}
+
+
+.true {
+	background: #f5f4f4;
+	padding: 100px 0  0 100px;
+	width: 100%;
+}
+
+.true__title {
+	width: 400px;
+	line-height: 1.6em;
+	font-size: 23px;
+}
+
+.true__text {
+	margin-top: 20px;
+	margin-bottom: 32px;
+}
+
+.work-btn {
+    background: #387FCC;
+    color: #fff;
+    border: 2px solid #387FCC;
+
+}
+
+.work-btn:hover {
+    background: #EFE407;
+    color: #387FCC;
+}
+
+/* ------ 6 Referenzen ------ */
+
+
+.referenz {
+    padding: 100px 0;
+}
+
+
+
+
+/* ------ 7 Footer ------ */
+
+
+.footer {
+    background: #387FCC;
+	padding-top: 100px;
+}
+
+.footer__wrap {
+	margin-bottom: 45px;
+}
+
+.footer__title {
+	font-weight: 700;
+	color: #fff;
+	display: block;
+	margin-bottom: 16px;
+}
+
+.footer__item {
+	font-size: 14px;
+	font-weight: 300;
+	color: #fff;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer__item:hover {
+	color: #EFE407;
+}
+
+.footer__text {
+    color: #fff;
+    text-align: center;
+}
+
+
+/*----- Modal ----------------*/
+
+.modal-form {
+    position: fixed;
+    background-color: #f5f4f4;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 150;
+    display: none;
+    margin: 0 auto;
+    width: 700px;
+    height: 600px;
+
+
+}
+
+.modal-filter {
+    background-color: rgba(0, 0, 0, 0.6);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    display: none;
+}
+
+
+/* ------ Media Queries ------ */
+
+/* 992-1200px */
+@media screen and (max-width: 1200px) {
+
+}
+
+/* 768-992px */
+@media screen and (max-width: 992px) {
+
+	.footer__wrap {
+		text-align: center;
+	}
+	.footer__item {
+		text-align: center;
+	}
+}
+
+/* 576-768px */
+@media screen and (max-width: 768px) {
+
+}
+
+
+/* 320-576px */
+
+@media screen and (max-width: 576px) {
+	
+}
